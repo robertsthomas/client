@@ -1,0 +1,19 @@
+<ion-grid id="slide-1">
+  <ion-row>
+    <div class="upload" (click)="uploadImage()">
+      <ion-icon
+        name="add-circle-outline"
+        class="ion-padding-bottom"
+      ></ion-icon>
+      <ion-text>Start by adding a photo</ion-text>
+
+      <input
+        type="file"
+        name="preview"
+        id="tool-img-upload"
+        hidden
+        (change)="imageChange()"
+      />
+    </div>
+  </ion-row>
+</ion-grid>

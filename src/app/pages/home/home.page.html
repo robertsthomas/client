@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-text>Easy Tools</ion-text>
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-row>
+      <ion-row>
+        <ion-searchbar mode='ios'></ion-searchbar>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<p>Home Works bro!</p>
+  <app-home-cards></app-home-cards>
 </ion-content>

@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
-import { ProfilePageModule } from '../profile/profile.module';
+import { HomeCardsModule } from 'src/app/components/home-cards/home-cards.module';
 
 @NgModule({
   imports: [
@@ -15,6 +15,8 @@ import { ProfilePageModule } from '../profile/profile.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
+    HomeCardsModule
+    
   ],
   exports: [HomePage],
   declarations: [HomePage]
