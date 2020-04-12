@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-add-tool',
+  selector: 'add-tool',
   templateUrl: './add-tool.page.html',
   styleUrls: ['./add-tool.page.scss'],
 })

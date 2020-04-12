@@ -1,0 +1,16 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size='4'>
+      <img src='' />
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <form>
+      <ion-list>
+        <ion-item position='stacked'>Tool Name</ion-item>
+        <ion-input type="text" name='name' placeholder='ex: Power Drill' (input)="handleToolChange()"></ion-input>
+      </ion-list>
+      <ion-button color="primary" (click)="handleToolSubmit()">Create</ion-button>
+    </form>
+  </ion-row>
+</ion-grid>

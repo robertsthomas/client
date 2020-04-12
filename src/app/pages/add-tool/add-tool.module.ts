@@ -15,7 +15,6 @@ import { Slide1Module } from 'src/app/components/Slides/slide1/slide1.module';
     FormsModule,
     IonicModule,
     AddToolPageRoutingModule,
-    // Slides
     Slide1Module
   ],
   exports: [AddToolPage],

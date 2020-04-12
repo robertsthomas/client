@@ -12,7 +12,7 @@ import { AddToolPageModule } from '../pages/add-tool/add-tool.module';
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab2Page }]),
-    AddToolPageModule
+    AddToolPageModule,
   ],
   declarations: [Tab2Page]
 })
