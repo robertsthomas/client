@@ -9,10 +9,7 @@ import { StatusBar } from "@ionic-native/status-bar/ngx";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
+import { NgReduxModule } from '@angular-redux/store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,10 +19,8 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     IonicModule.forRoot({}),
     AppRoutingModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers
-    }),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    NgReduxModule,
+
   ],
   providers: [
     StatusBar,
