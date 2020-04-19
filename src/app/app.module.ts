@@ -9,21 +9,33 @@ import { StatusBar } from "@ionic-native/status-bar/ngx";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { NgReduxModule } from '@angular-redux/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { StoreModule } from '@ngrx/store';
+import { FormsModule } from '@angular/forms';
+import { EffectsModule } from '@ngrx/effects';
+
+
+import {reducers, effects} from './store';
+import { ToolsComponent } from './tools/components/tools/tools.component'
+import { ToolEffects } from './tools/store/tool.effects';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ToolsComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot({}),
     AppRoutingModule,
-    NgReduxModule,
-
+    FormsModule,
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([ToolEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [
     StatusBar,
+    ToolsComponent,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
