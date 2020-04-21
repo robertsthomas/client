@@ -1,5 +1,7 @@
-import { ToolState } from "../../store/models/tool.model";
-import { ToolAction, ToolActionTypes } from "./tool.actions";
+import { ToolState } from "../../../store/models/tool.model";
+import { ToolsActions, ToolActionTypes } from "../actions/tools.actions";
+
+
 
 const initialState: ToolState = {
   loadingTools: false,
@@ -16,9 +18,10 @@ const initialState: ToolState = {
 
 export const toolsReducer = (
   state: ToolState = initialState,
-  action: ToolAction
+  action: ToolsActions
 ) => {
   switch (action.type) {
+    // GET TOOLS //
     case ToolActionTypes.GET_ALL_TOOLS:
       return {
           ...state,
@@ -37,7 +40,6 @@ export const toolsReducer = (
           ...state,
           error: action.error
         }
-
     default:
       return state;
   }

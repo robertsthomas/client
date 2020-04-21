@@ -1,4 +1,4 @@
-import { toolsReducer } from '../tools/store/tool.reducer';
+import { toolsReducer } from '../tools/store/reducers/tools.reducer';
 import { ToolEffects } from '../tools/store/tool.effects';
 
 

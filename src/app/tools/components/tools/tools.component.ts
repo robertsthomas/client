@@ -4,11 +4,10 @@ import { Store } from "@ngrx/store";
 import { AppState } from "../../../store/models/App.model";
 import { Tool } from "../../../store/models/tool.model";
 import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { GetAllTools, GetAllToolsSuccess } from "../../store/tool.actions";
+import { GetAllTools } from "../../store/actions/tools.actions";
 
 @Component({
-  selector: "app-tools",
+  selector: "tools",
   templateUrl: "./tools.component.html",
   styleUrls: ["./tools.component.css"],
 })

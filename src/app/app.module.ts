@@ -19,9 +19,10 @@ import { EffectsModule } from '@ngrx/effects';
 import {reducers, effects} from './store';
 import { ToolsComponent } from './tools/components/tools/tools.component'
 import { ToolEffects } from './tools/store/tool.effects';
+import { AddComponent } from './tools/components/add/add.component';
 
 @NgModule({
-  declarations: [AppComponent, ToolsComponent],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -30,12 +31,11 @@ import { ToolEffects } from './tools/store/tool.effects';
     AppRoutingModule,
     FormsModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([ToolEffects]),
+    EffectsModule.forRoot(effects),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [
     StatusBar,
-    ToolsComponent,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],

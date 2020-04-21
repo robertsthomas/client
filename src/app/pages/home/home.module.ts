@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
-import { HomeCardsModule } from 'src/app/components/home-cards/home-cards.module';
+import { HomeCardsModule } from '../../components/home-cards/home-cards.module';
+import { ToolsModule } from '../../tools/components/tools/tools.module';
 
 @NgModule({
   imports: [
@@ -15,8 +16,8 @@ import { HomeCardsModule } from 'src/app/components/home-cards/home-cards.module
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    HomeCardsModule
-    
+    HomeCardsModule,
+    ToolsModule
   ],
   exports: [HomePage],
   declarations: [HomePage]

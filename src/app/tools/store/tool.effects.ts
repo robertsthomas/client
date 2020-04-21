@@ -5,7 +5,7 @@ import {
   GetAllTools,
   GetAllToolsSuccess,
   GetAllToolsFailure,
-} from "./tool.actions";
+} from "./actions/tools.actions";
 import { mergeMap, map, catchError } from "rxjs/operators";
 import { ToolService } from "../service/tool.service";
 import { of } from "rxjs";
