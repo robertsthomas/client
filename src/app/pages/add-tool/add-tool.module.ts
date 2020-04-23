@@ -8,6 +8,7 @@ import { AddToolPageRoutingModule } from './add-tool-routing.module';
 
 import { AddToolPage } from './add-tool.page';
 import { Slide1Module } from 'src/app/components/Slides/slide1/slide1.module';
+import { AddModule } from 'src/app/tools/components/add/add.module';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { Slide1Module } from 'src/app/components/Slides/slide1/slide1.module';
     FormsModule,
     IonicModule,
     AddToolPageRoutingModule,
+    AddModule
   ],
   exports: [AddToolPage],
   declarations: [AddToolPage]
