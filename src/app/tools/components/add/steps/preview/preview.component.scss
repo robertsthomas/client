@@ -1,0 +1,26 @@
+#slide-1 {
+    height: 100%;
+    position: fixed;
+    padding: 0;
+    overflow: hidden;
+
+    ion-row {
+        height: 100%;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        .upload {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        ion-icon {
+            font-size: 50px;
+            color: #a2a4ab;
+            padding-bottom: "--ion-padding-bottom";
+        }
+        ion-text {
+            color: var(--ion-color-medium-tint);
+        }
+    }
+}

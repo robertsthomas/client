@@ -1,4 +1,4 @@
 export const STEPS = {
-    image: 'image',
+    preview: 'preview',
     toolData: 'toolData'
 }

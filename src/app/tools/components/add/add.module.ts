@@ -2,11 +2,18 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { AddComponent } from "./add.component";
 import { IonicModule } from "@ionic/angular";
-import { Slide1Module } from '../../../components/Slides/slide1/slide1.module';
+import { AddService } from '../../services/add/add.service';
+import { WorkflowService } from '../../services/workflow/workflow.service';
+import { PreviewComponent } from './steps/preview/preview.component';
+import { ToolDataComponent } from './steps/tool-data/tool-data.component';
 
 @NgModule({
-  declarations: [AddComponent],
-  imports: [CommonModule, IonicModule, Slide1Module],
+  declarations: [AddComponent, PreviewComponent, ToolDataComponent],
+  imports: [CommonModule, IonicModule],
   exports: [AddComponent],
+  providers: [
+    { provide: AddService, useClass: AddService },
+    { provide: WorkflowService, useClass: WorkflowService },
+  ],
 })
 export class AddModule {}

@@ -4,6 +4,7 @@ import { TabsPage } from "./tabs.page";
 import { AuthGuard } from "../guards/auth/auth.guard";
 import { AddComponent } from "../tools/components/add/add.component";
 import { AddToolPage } from "../pages/add-tool/add-tool.page";
+import { PreviewComponent } from "../tools/components/add/steps/preview/preview.component";
 
 const routes: Routes = [
   {
@@ -30,15 +31,9 @@ const routes: Routes = [
         children: [
           {
             path: "",
-            redirectTo: "/tabs/add/first",
-            pathMatch: "full",
             loadChildren: () =>
               import("../tab2/tab2.module").then((m) => m.Tab2PageModule),
-          },
-          {
-            path: "first",
-            component: AddComponent,
-          },
+          }
         ],
       },
       {
