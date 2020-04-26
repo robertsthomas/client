@@ -1,3 +1,4 @@
 <div [ngSwitch]="slide">
-  <app-preview *ngSwitchCase="1"></app-preview>
+  <app-preview *ngSwitchCase="1" (goToNext)="goToNext($event)"></app-preview>
+  <app-tool-data *ngSwitchCase="2"></app-tool-data>
 </div>
